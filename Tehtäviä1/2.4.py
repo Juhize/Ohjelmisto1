@@ -1,0 +1,15 @@
+#Kirjoita ohjelma, joka kysyy kolme kokonaislukua.
+#Ohjelma tulostaa lukujen summan, tulon ja keskiarvon.
+print("Hei!\nIlmoita kolme kokonaislukua, niin lasken niiden summan, tulon, sekä keskiarvon.")
+luku1_str = input("Luku 1: ")
+luku1 = int(luku1_str)
+luku2_str = input("Luku 2: ")
+luku2 = int(luku2_str)
+luku3_str = input("Luku 3: ")
+luku3 = int(luku3_str)
+summa = (luku1)+(luku2)+(luku3)
+tulo = (luku1)*(luku2)*(luku3)
+ka = (summa/3)
+print("Summa: " + str(summa))
+print("Tulo: " + str(tulo))
+print("keskiarvo: " + str(ka))
