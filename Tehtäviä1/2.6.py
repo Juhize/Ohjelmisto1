@@ -4,13 +4,7 @@
 
 import random
 
-yksi = random.randint(0, 9)
-kaksi = random.randint(0, 9)
 kolme = random.randint(0, 9)
+neljä = random.randint(0, 6)
 
-nyksi = random.randint(0, 6)
-nkaksi = random.randint(0, 6)
-nkolme = random.randint(0, 6)
-nneljä = random.randint(0, 6)
-
-print(str(yksi) + str(kaksi) + str(kolme) + "\n" + str(nyksi) + str(nkaksi) + str(nkolme) + str(nneljä))
+print(str(kolme) + str(kolme) + str(kolme) + "\n" + str(neljä) + str(neljä) + str(neljä) + str(neljä))
