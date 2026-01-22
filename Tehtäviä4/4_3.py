@@ -17,7 +17,7 @@ while lukuStr!="":
     if lukuStr != "":
         lukuInt = int(lukuStr)
 if silmukassa == True:
-    print("Suurin luku: " + suurin)
-    print("Pienin luku: " + pienin)
+    print("Suurin luku: " + str(suurin))
+    print("Pienin luku: " + str(pienin))
 else:
     print("lopetit ennen lukuja")

@@ -10,3 +10,15 @@
 #Kirjoita ohjelma, joka kysyy arvottavien pisteiden määrän käyttäjältä ja toteuttaa piin likiarvon laskennan edellä kuvatulla menetelmällä.
 #Lopuksi ohjelma tulostaa piin likiarvon käyttäjälle.
 #(Huomaa, että jokaisesta arvotusta pisteestä (x,y) on helppoa testata onko se yksikköympyrän A sisällä: riittää testata, toteuttaako piste epäyhtälön x^2+y^2<1.)
+
+import math
+import random
+# A = ympyrän pinta-ala
+# B = neliön pinta-ala
+# edellämainituista tarvitaan verrattavat piste joukot x ja y
+# x = float(-1,1)
+# y = float(-1,1)
+# N = int(input("Anna arvottavien pisteiden määrä: ")
+#while != N:
+#if joka testaa x^2+y^2<1
+# n = neliön x ja y, jotka eivät ole ympyrän x ja y arvojen joukossa
