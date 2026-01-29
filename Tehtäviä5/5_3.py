@@ -1,10 +1,15 @@
 #Kirjoita ohjelma, joka kysyy käyttäjältä kokonaisluvun ja ilmoittaa, onko se alkuluku. 
 #Tässä tehtävässä alkulukuja ovat luvut, jotka ovat jaollisia vain ykkösellä ja itsellään.
-on_alkuluku = True
-#tee input osio, mikä kysyy lukua
+
 luku = int(input("Anna luku: "))
-#lisää listaan kaikki luvut 2-ja input luvun välillä olevat luvut
-#vihje for .range
-#jaa input luku jokaisella listan luvulla
-#jos prosessi saa aikaiseksi kokonaisluvun ilmoitettu luku ei ole alkuluku
-#tarvitaanko uusi lista minkä lukuja tarkastellaan?
+#Annettu luku ei saa olla pienempi, kuin 2
+if luku >= 2:
+    for i in range(2, luku):
+        if luku%i == 0:
+            # jaetaan annettu luku kaikilla "rangella" olevilla luvuilla -1 (luku jää ilman -1 jo pois tästä joukosta)
+            print("Luku ei ole alkuluku")
+            break
+        #Jos jossakin jakolaskussa on desimaaleja %, ohjelma kirjoittaa, että luku ei ole alkuluku, minkä jälkeen loopin suorittaminen pysäytetään
+    else :
+        print("Luku on alkuluku")
+        #Jos if looppi ei keskeydy ohjelma tulostaa luvun olevan alkuluku

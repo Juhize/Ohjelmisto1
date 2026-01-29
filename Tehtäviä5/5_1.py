@@ -4,14 +4,15 @@
 
 import random
 lkm = int(input("Anna arpakuutioiden lukumäärä: "))
-#annetaan silmälukujen summaksi 0
-summa = 0
-#Heitetään noppia haluttu lkm
-#Muuttuja nopan_nro on ns. kierroslaskuri
-for nopan_nro in range(lkm):
-    #Heitetään noppaa yhden kerran
-    d6 = random.randint(1,6)
-    #Lisätään saatu silmäluku muuttujan summa arvoon
-    summa +=d6 # +=summan uusi arvo on summa + d6
-    print(f"noppa {nopan_nro +1}, tulos = {d6}")
+summa = 0 
+#Jotta summa voidaan laskea se täytyy määritellä luvuksi 0
+for nopan_nro in range(lkm): 
+    #Jokaista nopan numeroa kohden jonossa, joka päättyy arpakuutioiden lukumäärään
+    d6 = random.randint(1,6) 
+    #Määritellään noppa 6 numeroiseksi randint(1,6)
+    summa +=d6 
+    #Summaan lisätään arvotut luvut yhdestä kuuteen loopin sisällä
+    print(f"noppa {nopan_nro +1}, tulos = {d6}") 
+    #Esitetään loopin sisällä missä kohtaa lkm rangea luvut on arvottu ja arvotut "nopat"
 print(f"Noppien summa on {summa}")
+#Nyt loopin ulkopuolella esitetään arvottujen lukujen yhteenlaskettu summa
