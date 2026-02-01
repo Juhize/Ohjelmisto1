@@ -3,9 +3,11 @@
 # joka heittää noppaa niin kauan kunnes tulee kuutonen.
 # Pääohjelma tulostaa kunkin heiton jälkeen saadun silmäluvun.
 import random
-d6 = random.randint (1,6)
 
-def palautus():
-
-while d6 == 6:
-    print(d6)
+def heitto():
+     d6 = random.randint (1,6)
+     print(d6)
+     return d6
+tulos = 0
+while tulos != 6:
+    tulos = heitto()
