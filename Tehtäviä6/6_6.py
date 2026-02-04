@@ -18,6 +18,8 @@ while määrä<2:
     pizza()
 
 if pizzat[0] < pizzat[1]:
-    print(f"Ensimmäinen pizza antaa paremman vastineen rahalle ({pizzat[0]:.2f}€)")
+    print(f"Ensimmäinen pizza antaa paremman vastineen rahalle {pizzat[0]:.2f}€ per neliö cm")
+elif pizzat[0] == pizzat[1]:
+    print(f"Pizzat antavat yhtä hyvän vastineen rahalle {pizzat[1]:.2f}€ per neliö cm")
 else:
-    print(f"Toinen pizza antaa paremman vastineen rahalle ({pizzat[1]:.2f}€)")
+    print(f"Toinen pizza antaa paremman vastineen rahalle {pizzat[1]:.2f}€ per neliö cm")
