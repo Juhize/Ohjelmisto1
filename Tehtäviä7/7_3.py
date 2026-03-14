@@ -19,17 +19,20 @@ def hae():
     ICAO = input("Syötä ICAO: ")
     print(lentoasemat[ICAO])
 def tulosta_valikko():
-    print
-    print
-    print
+    print("1. Syötä uusi lentoasema")
+    print("2. Hae lentoasemaa")
+    print("3. Lopeta")
 
 lentoasemat = {"EFHK": "Helsinki-Vantaa"}
-
-toiminto = int(input("Syötä toiminto: "))
-tulosta_valikko()
-
-while toiminto !=9:
+toiminto = 0
+while toiminto !=3:
+    tulosta_valikko()
+    toiminto = int(input("Syötä toiminto: "))
     if toiminto ==1:
         lisää(lentoasemat)
     elif toiminto == 2:
         hae()
+    elif toiminto == 3:
+        print("Ohjelma lopetetaan")
+    else:
+        print("Virheellinen toiminto")
