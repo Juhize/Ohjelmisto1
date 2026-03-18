@@ -18,10 +18,14 @@ class Car:
 
     def accelerate(self, v0, v1):
         self.current_speed = self.current_speed + v1
-        if self.current_speed < 0:
-            self.current_speed=0
-        if self.current_speed > self.max_speed:
-            self.current_speed = self.max_speed
+        #Saimpas tehtyä näin
+        self.current_speed = min(self.current_speed, self.max_speed)
+        self.current_speed = max(0, self.current_speed)
+        #Jätän nämä kommentteihin, jos jostain syystä tuo aikaisempi ei toimi.
+        # if self.current_speed < 0:
+        #     self.current_speed=0
+        # if self.current_speed > self.max_speed:
+        #     self.current_speed = self.max_speed
 
         if v1 < 0:
             print("Auto hidastaa")
