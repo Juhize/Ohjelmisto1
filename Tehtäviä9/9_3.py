@@ -6,7 +6,7 @@
 #matkan lukemaan 2090 km.
 
 class Car:
-    def __init__(self, plate, max_speed, current_speed = 0, distance = 2000):
+    def __init__(self, plate, max_speed, current_speed = 0, distance = 0):
         self.plate = plate
         self.max_speed = max_speed
         self.current_speed = current_speed
@@ -29,7 +29,7 @@ class Car:
             print("Auton kiihtyvyys on 0")
         return self.current_speed
 
-car1 = Car("ABC-123", 142)
+car1 = Car("ABC-123", 142, distance = 2000)
 
 car1.kulje(1.5, 60)
 print(f"Auton 1 kuljettu matka on nyt {car1.distance:.0f} km")
