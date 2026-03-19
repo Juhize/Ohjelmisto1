@@ -30,7 +30,9 @@ class Car:
 
     def accelerate(self, v1):
         self.current_speed = self.current_speed + v1
+# Funktio min vertaa arvoja self.current_speed ja self.max_speed ja valitsee näistä pienemmän.
         self.current_speed = min(self.current_speed, self.max_speed)
+# Funktio max vertaa self.current_speediä arvoon 0 ja valitsee arvoista suuremman.
         self.current_speed = max(0, self.current_speed)
         return self.current_speed
     
@@ -49,13 +51,13 @@ while max([car.distance for car in race_cars]) <= 10000:
     for car in race_cars:
         car.kulje(1, car.current_speed)
     race_time = race_time + 1
-# Python ei osaa purkaa järjestystä suoraan olio listasta ilman funktiota, joten opettelin tähän nyt boonuksena lambdan käyttöä, jotta koodi pysyy yksinkertaisena.
-# Käytin tekoälyä, mutta käytin aikaa asian ymmärtämiseen.
+# Python ei osaa purkaa yksittäisiä arvoja suoraan olio listasta ilman funktiota.
+# Opettelin tätä varten nyt lambdan käyttöä, jotta koodi pysyy yksinkertaisena.
 # 1. key= määrittelee minkä mukaan lista järjestetään
 # 2. key:nä käytetään minifunktiota lambda car: car.distance 
 # -> car on tätä funktiota varten nimetty yksittäisen olion nimi (vaikka molemmat car:t korvaisi sanalla blep, funktio toimii)
 # 3. funktio hakee jokaiselta listan oliolta ominaisuuden distance
-# 4. Lopuksi määritellään pilkun jälkeen järjestys kääneiseksi
+# 4. Lopuksi määritellään pilkun jälkeen järjestys käänteiseksi
 race_cars.sort(key=lambda car: car.distance, reverse=True)
 print(f"Kisa päättyi ajassa: {race_time} tuntia.")
 list_key=1
