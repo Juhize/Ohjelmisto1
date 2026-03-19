@@ -42,7 +42,7 @@ class Car:
 def build(how_many):
     for i in range(0, how_many):
         race_cars.append(Car(f"ABC-{i+1}"))
-    return race_cars
+
 build(10)
 race_time = 0
 while max([car.distance for car in race_cars]) <= 10000:
