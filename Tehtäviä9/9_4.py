@@ -16,7 +16,7 @@
 import random
 race_cars = []
 class Car:
-    noc=0
+    noc=0 #number of cars
     def __init__(self, plate, max_speed=(None)):
         self.plate = plate
         self.max_speed = max_speed
