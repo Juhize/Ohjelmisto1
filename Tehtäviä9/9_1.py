@@ -9,11 +9,11 @@
 
 class Car:
 
-    def __init__(self, plate, max_speed, current_speed=0, distance=0):
+    def __init__(self, plate, max_speed):
         self.plate = plate
         self.max_speed = max_speed
-        self.current_speed = current_speed
-        self.distance = distance
+        self.current_speed = 0
+        self.distance = 0
 
 car1 = Car("ABC-123", "142 km/h")
 

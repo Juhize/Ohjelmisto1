@@ -16,11 +16,11 @@
 import random
 race_cars = []
 class Car:
-    def __init__(self, plate, max_speed=(None), current_speed = 0, distance = 0):
+    def __init__(self, plate, max_speed=(None)):
         self.plate = plate
         self.max_speed = max_speed
-        self.current_speed = current_speed
-        self.distance = distance
+        self.current_speed = 0
+        self.distance = 0
         if self.max_speed == None:
             self.max_speed = random.randint(100, 200)
     
