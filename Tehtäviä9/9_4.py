@@ -16,11 +16,13 @@
 import random
 race_cars = []
 class Car:
+    noc=0
     def __init__(self, plate, max_speed=(None)):
         self.plate = plate
         self.max_speed = max_speed
         self.current_speed = 0
         self.distance = 0
+        Car.noc+=1
         if self.max_speed == None:
             self.max_speed = random.randint(100, 200)
     
@@ -41,7 +43,7 @@ class Car:
     
 def build(how_many):
     for i in range(0, how_many):
-        race_cars.append(Car(f"ABC-{i+1}"))
+        race_cars.append(Car(f"ABC-{Car.noc +1}"))
 
 build(10)
 race_time = 0
