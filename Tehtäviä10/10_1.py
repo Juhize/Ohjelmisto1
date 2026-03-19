@@ -7,3 +7,14 @@
 # ylös- tai alaspäin ja ilmoittavat, missä kerroksessa hissi sen jälkeen on. Testaa 
 # luokkaa siten, että teet pääohjelmassa hissin ja käsket sen siirtymään haluamaasi 
 # kerrokseen ja sen jälkeen takaisin alimpaan kerrokseen.
+
+class Elevator:
+    def __init__(self, floor):
+        self.floor = int(0,10)
+        if self.floor > 10:
+            print("Kerros 10 on ylin kerros")
+            self.floor=10
+
+    def ride(floor):
+        self.floor = floor
+        return self.floor
