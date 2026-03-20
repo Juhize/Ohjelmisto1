@@ -9,12 +9,34 @@
 # kerrokseen ja sen jälkeen takaisin alimpaan kerrokseen.
 
 class Elevator:
-    def __init__(self, floor):
-        self.floor = int(0,10)
-        if self.floor > 10:
-            print("Kerros 10 on ylin kerros")
-            self.floor=10
+    def __init__(self, ground_floor, roof_floor):
+        self.ground = ground_floor
+        self.roof = roof_floor
+        self.floor = ground_floor
 
-    def ride(floor):
-        self.floor = floor
+    def ride_up(self):
+        self.floor = self.floor +1
         return self.floor
+    
+    def ride_down(self):
+        self.floor = self.floor - 1
+        return self.floor
+
+    def ride(self, floor):
+        while floor < self.floor:
+            if self.floor == self.ground:
+                print("This model cannot go bellow ground")
+                break
+            self.ride_down()
+            print(self.floor)
+        while floor > self.floor:
+            if self.floor == self.roof:
+                print("This model cannot fly")
+                break
+            self.ride_up()
+            print(self.floor)
+
+elevator1 = Elevator(-1, 10)
+
+elevator1.ride(10)
+elevator1.ride(-1)
