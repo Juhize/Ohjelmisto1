@@ -18,6 +18,9 @@ class Building:
     def build_elevators(self, lowest_floor, top_floor, num_elevators):
         self.elevators.append(Elevator(f"Elevator{Elevator.noe +1}", self.lowest_floor, self.top_floor))
 
+    def use_elevator(name, floor):
+        Elevator.ride(name, floor)
+
 class Elevator:
     noe=0 #number of elevators
     def __init__(self, name, ground_floor, roof_floor):
@@ -28,7 +31,7 @@ class Elevator:
         Elevator.noe += 1
 
     def __str__(self):
-        return f"{self.name} Alinkerros: {self.ground}, Ylinkerros: {self.roof}"
+        return f"{self.name} Is currently in floor: {self.floor}"
 
     def ride_up(self):
         self.floor = self.floor +1
@@ -53,5 +56,7 @@ class Elevator:
             print(self.floor)
             
 building1 = Building(-2, 10, 2)
+Building.use_elevator(building1.elevators[0], -5)
+Building.use_elevator(building1.elevators[1], 12)
 for elevator in building1.elevators:
     print(f"{elevator}")
