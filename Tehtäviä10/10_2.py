@@ -7,15 +7,28 @@
 # talon hisseillä ajelemiseksi.
 
 class Building:
-    def __init__(self, top_floor, lowest_floor, num_elevators):
+    def __init__(self, lowest_floor, top_floor, num_elevators):
+        self.elevators = []
         self.top_floor = top_floor
-        self.lowest_floor
+        self.lowest_floor = lowest_floor
+        self.num_elevators = num_elevators
+        for i in range(0, num_elevators):
+            self.build_elevators(lowest_floor, top_floor, num_elevators)
+
+    def build_elevators(self, lowest_floor, top_floor, num_elevators):
+        self.elevators.append(Elevator(f"Elevator{Elevator.noe +1}", self.lowest_floor, self.top_floor))
 
 class Elevator:
-    def __init__(self, ground_floor, roof_floor):
+    noe=0 #number of elevators
+    def __init__(self, name, ground_floor, roof_floor):
+        self.name = name
         self.ground = ground_floor
         self.roof = roof_floor
         self.floor = ground_floor
+        Elevator.noe += 1
+
+    def __str__(self):
+        return f"{self.name} Alinkerros: {self.ground}, Ylinkerros: {self.roof}"
 
     def ride_up(self):
         self.floor = self.floor +1
@@ -38,3 +51,7 @@ class Elevator:
                 break
             self.ride_up()
             print(self.floor)
+            
+building1 = Building(-2, 10, 2)
+for elevator in building1.elevators:
+    print(f"{elevator}")
