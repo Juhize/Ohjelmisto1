@@ -1,4 +1,4 @@
-# Here is the previous assignment using dictionary in elevators.
+# Here is the previous assignment using dictionary for elevators.
 
 class Building:
     def __init__(self, lowest_floor, top_floor, num_elevators):
@@ -30,12 +30,12 @@ class Elevator:
         return f"{self.name} is currently in floor: {self.floor}"
 
     def ride_up(self):
-        self.floor = self.floor +1
-        return self.floor
+        self.floor += 1
+        return
     
     def ride_down(self):
-        self.floor = self.floor - 1
-        return self.floor
+        self.floor -= 1
+        return
 
     def ride(self, floor):
         while floor < self.floor:
