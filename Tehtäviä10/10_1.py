@@ -15,12 +15,12 @@ class Elevator:
         self.floor = ground_floor
 
     def ride_up(self):
-        self.floor = self.floor +1
-        return self.floor
+        self.floor += 1
+        return
     
     def ride_down(self):
-        self.floor = self.floor - 1
-        return self.floor
+        self.floor -= 1
+        return
 
     def ride(self, floor):
         while floor < self.floor:
@@ -38,5 +38,5 @@ class Elevator:
 
 elevator1 = Elevator(-1, 10)
 
-elevator1.ride(10)
-elevator1.ride(-1)
+elevator1.ride(11)
+elevator1.ride(-2)
