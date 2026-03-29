@@ -1,0 +1,175 @@
+/*COMMON AND FRONTPAGE*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(to bottom, #c6cbcb, #bababa);
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e6e7e7;
+    height: 60px;
+}
+
+.logo {
+    background-color: #052225;
+    color:#fde415;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    font-weight: 900;
+    font-size: x-large;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin-right: 100px;
+    font-size: x-large;
+}
+
+nav ul li {
+    margin-left: 40px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.ceo {
+    text-align: center;
+    width: 80%;
+    max-width: 900px;
+}
+
+h1 {
+    font-size: 5rem;
+    margin-bottom: 20px;
+}
+
+.image-jelon img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.description {
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1rem;
+}
+
+/*PRODUCTS*/
+
+.products-layout {
+    display: block;
+    gap: 40px;
+    align-items: flex-start;
+    padding-top: 40px;
+    margin-top: 50px;
+}
+
+.main-content {
+    padding: 20px;
+}
+
+.main-content .image1 {
+    height: 350px;
+    width: auto;
+    margin-bottom: 20px;
+}
+
+.image1-text {
+    line-height: 1.5;
+}
+
+.product-ribbon {
+    display: flex;
+}
+
+.product-card {
+    padding: 15px;
+    width: 100%;
+    text-align: left;
+}
+
+.product-card h3 {
+    margin-bottom: 2px;
+    font-size: 1.1rem;
+}
+
+.product-img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    margin: 0 0 10px 0;
+}
+
+.product-caption {
+    font-size: 0.8rem;
+    color: #666;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/*CONTACT*/
+
+.contact-layout {
+    padding-top: 80px;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-info h1 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.address p {
+    font-style: normal;
+    line-height: 1.2;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+.address em {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.map-container {
+    flex: 0.5; 
+}
+
+.iframe1{
+    width: 600px;
+    height: 450px;
+}
