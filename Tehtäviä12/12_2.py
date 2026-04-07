@@ -7,8 +7,8 @@
 
 import requests
 
-#key = "024b8ef3eb642620a0ff6b3f4b0a1bb4"
-key = "d5617b002ed2b89c33043122a30586b8"
+key = "024b8ef3eb642620a0ff6b3f4b0a1bb4"
+#key = "d5617b002ed2b89c33043122a30586b8"
 city = input("Kaupunki: ")
 country = "FI"
 url = f"https://api.openweathermap.org/data/2.5/weather?q={city},{country},&appid={key}"
