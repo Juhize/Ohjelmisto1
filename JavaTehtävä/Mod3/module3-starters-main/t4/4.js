@@ -13,3 +13,9 @@ const students = [
     id: '5423679',
   },
 ];
+
+const targetElem = document.querySelector('#target');
+
+for (let nimi of students) {
+    targetElem.innerHTML += `<option value="${nimi.id}">${nimi.id} ${nimi.name}</option>`;
+}
