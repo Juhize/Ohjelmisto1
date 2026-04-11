@@ -9,8 +9,7 @@ yhteys_sql = mysql.connector.connect(
     port=3306,
     database='flight_game',
     user='osku',
-    password='1230',
-    autocommit=True
+    password='1230'
 )
 
 kursori = yhteys_sql.cursor()
