@@ -13,9 +13,15 @@ const students = [
     id: '5423679',
   },
 ];
-
+// Valitaan kohde html sivulta
 const targetElem = document.querySelector('#target');
-
-for (let nimi of students) {
-    targetElem.innerHTML += `<option value="${nimi.id}">${nimi.id} ${nimi.name}</option>`;
-}
+// Käytetään forEach metodia funktiona, mikä käy jokaisen listan olion läpi
+students.forEach(function(student) {
+// Luodaan HTML elementti (tila) = uusi option select-valikkoon
+  const tila = document.createElement('option');
+// Lisätään olion tiedot juuri tehtyyn tila-elementtiin
+  tila.value = student.id;
+  tila.textContent = student.name;
+// Lisätään nyt valmis option-tila osaksi html sivua
+  targetElem.appendChild(tila);
+});
