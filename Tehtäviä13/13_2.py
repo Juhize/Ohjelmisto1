@@ -9,16 +9,17 @@ yhteys_sql = mysql.connector.connect(
     port=3306,
     database='flight_game',
     user='osku',
-    password='1230',
-    autocommit=True
+    password='1230'
 )
 
 kursori = yhteys_sql.cursor()
+
 
 app = Flask(__name__)
 @app.route('/kenttä/<icao>')
 def prime(icao):
     try:
+        icao = icao.upper()
         kursori.execute(f"SELECT name, Municipality from airport WHERE ident = '{icao}'")
         data = (kursori.fetchall())
         name = data[0][0]
@@ -26,19 +27,25 @@ def prime(icao):
     
         tilakoodi = 200
         vastaus = {
-            "status": tilakoodi,
+#            "status": tilakoodi,
             "ICAO": icao,
             "Name": name,
             "Municipality": muni
             }
-    except ValueError:
-        tilakoodi = 400
+
+    except IndexError:
+        tilakoodi = 404
         vastaus = {
             "status": tilakoodi,
-            "teksti": "Virheellinen ICAO"
+            "teksti": "Lentokenttää ei löytynyt"
         }
+
 #    return str(f"ICAO: {icao} Name: {name} Municipality: {muni}")
     json_vastaus = json.dumps(vastaus)
-    return Response(response=json_vastaus, status=tilakoodi, mimetype="application/json")
+    return Response(
+        response=json_vastaus, 
+        status=tilakoodi, 
+        mimetype="application/json"
+        )
 
 app.run(use_reloader=True, host='127.0.0.1', port=3000)
