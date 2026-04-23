@@ -93,3 +93,8 @@ const picArray = [
 ];
 
 // add your code here
+const articles = document.querySelector('#pictures');
+picArray.forEach((article) => {
+    const artikkeli = document.createElement('article');
+    articles.innerHTML(`article`);
+});
