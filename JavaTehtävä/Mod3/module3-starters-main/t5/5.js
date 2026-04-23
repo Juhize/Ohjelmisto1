@@ -93,8 +93,29 @@ const picArray = [
 ];
 
 // add your code here
+// const articles = document.querySelector('#pictures');
+// picArray.forEach((item) => {
+//     articles.innerHTML +=`
+// <article class="card">
+//    <h2>${item.title}</h2>
+//    <figure>
+//       <img src="${item.image.medium}" alt="${item.title}">
+//       <figcaption>${item.caption}</figcaption>
+//    </figure>
+//    <p>${item.description}</p>
+// </article>`;
+// });
+
 const articles = document.querySelector('#pictures');
-picArray.forEach((article) => {
+picArray.forEach(function(item){
     const artikkeli = document.createElement('article');
-    articles.innerHTML(`article`);
+    artikkeli.classList.add('card');
+    artikkeli.innerHTML =`
+   <h2>${item.title}</h2>
+   <figure>
+      <img src="${item.image.medium}" alt="${item.title}">
+      <figcaption>${item.caption}</figcaption>
+   </figure>
+   <p>${item.description}</p>`;
+    articles.appendChild(artikkeli);
 });
