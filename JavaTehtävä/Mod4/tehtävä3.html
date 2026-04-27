@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <head>
   <meta charset="utf-8">
-  <title>Tehtävä1</title>
-  <script src="tehtävä1.js" defer></script>
+  <title>Tehtävä3</title>
+  <link href="tehtävä3.css" rel="stylesheet">
+  <script src="tehtävä3.js" defer></script>
 </head>
 <body>
+  <header>
   <form id="haku" action="https://api.tvmaze.com/search/shows">
     <input id="query" name="q" type="text">
     <input type="submit" value="Search">
   </form>
+  </header>
+  <div id="results"></div>
 </body>
